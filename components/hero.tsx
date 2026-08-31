@@ -75,23 +75,25 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Newborn care is also part of the hero atmosphere, softly integrated into the background. */}
+      {/* Newborn care is part of the room itself — large, soft and confined to the visual side of the hero. */}
       <div
-        className="pointer-events-none absolute bottom-[-14%] left-[30%] -z-15 hidden h-[46%] w-[46%] overflow-hidden opacity-[0.42] xl:block"
+        className="pointer-events-none absolute inset-y-0 right-[-10%] -z-15 hidden w-[58%] overflow-hidden opacity-[0.30] xl:block"
         aria-hidden
       >
         <img
           src="/images/mch-newborn.jpg"
           alt=""
-          className="h-full w-full object-cover object-center [mask-image:radial-gradient(ellipse_at_center,black_18%,rgba(0,0,0,0.86)_44%,transparent_78%)] blur-[0.2px]"
-          width={900}
-          height={700}
+          className="h-full w-full scale-[1.12] object-cover object-[68%_center]
+            [mask-image:linear-gradient(to_right,transparent_0%,rgba(0,0,0,0.12)_14%,rgba(0,0,0,0.72)_34%,black_58%,black_100%)]
+            [filter:saturate(0.88)]"
+          width={1200}
+          height={1000}
         />
       </div>
 
       <div className="mx-auto flex min-h-[790px] max-w-[1536px] items-center px-5 pb-9 pt-28 sm:px-8 lg:min-h-[max(820px,calc(100svh-50px))] lg:px-20 lg:pb-12 lg:pt-20">
         <div className="relative w-full">
-          <div className="max-w-[700px] lg:pt-3">
+          <div className="relative z-20 max-w-[700px] lg:pt-3">
             <p className="inline-flex items-center gap-2 rounded-full border border-[#d4e1d9] bg-white/78 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.14em] text-pine shadow-[0_8px_22px_rgba(12,59,46,0.06)] backdrop-blur-md">
               <span className="h-1.5 w-1.5 rounded-full bg-gold" aria-hidden />
               {site.facility.level} · {site.facility.code}
@@ -197,13 +199,13 @@ export default function Hero() {
           </div>
 
           {/* Bottom-center baby card */}
-          <div className="absolute bottom-[-18px] left-[51%] hidden w-[420px] -translate-x-1/2 overflow-hidden rounded-[27px] border border-white/80 bg-white/76 shadow-[0_22px_55px_rgba(12,59,46,0.18)] backdrop-blur-xl xl:block">
-            <div className="grid grid-cols-[44%,56%] items-stretch">
+          <div className="absolute bottom-[-18px] left-[51%] hidden w-[450px] -translate-x-1/2 overflow-hidden rounded-[27px] border border-white/80 bg-white/76 shadow-[0_22px_55px_rgba(12,59,46,0.18)] backdrop-blur-xl xl:block">
+            <div className="grid grid-cols-[46%,54%] items-stretch">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/images/mch-newborn.jpg"
                 alt="Newborn baby receiving care"
-                className="h-[154px] w-full object-cover"
+                className="h-[164px] w-full object-cover"
                 width={480}
                 height={384}
               />
