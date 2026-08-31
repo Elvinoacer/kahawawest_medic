@@ -77,13 +77,13 @@ export default function Hero() {
 
       {/* Newborn care is part of the room itself — large, soft and confined to the visual side of the hero. */}
       <div
-        className="pointer-events-none absolute inset-y-0 right-[-10%] -z-15 hidden w-[58%] overflow-hidden opacity-[0.30] xl:block"
+        className="pointer-events-none absolute inset-y-0 right-[7%] -z-15 hidden w-[29%] overflow-hidden opacity-[0.30] xl:block"
         aria-hidden
       >
         <img
           src="/images/mch-newborn.jpg"
           alt=""
-          className="h-full w-full scale-[1.12] object-cover object-[68%_center]
+          className="h-full w-full scale-[1.0] object-cover object-[68%_center]
             [mask-image:linear-gradient(to_right,transparent_0%,rgba(0,0,0,0.12)_14%,rgba(0,0,0,0.72)_34%,black_58%,black_100%)]
             [filter:saturate(0.88)]"
           width={1200}
