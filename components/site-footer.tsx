@@ -21,8 +21,7 @@ export default function SiteFooter() {
       <div className="border-b border-cream/10">
         <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-6 px-4 py-14 sm:px-6 lg:flex-row lg:items-center">
           <h2 className="max-w-xl font-display text-3xl font-semibold leading-tight sm:text-4xl">
-            Care for your family is one{" "}
-            <span className="text-gold">tap</span> away.
+            Your family’s care is one <span className="text-gold">tap</span> away.
           </h2>
           <div className="flex flex-wrap gap-3">
             <a href="#book" className="flex items-center gap-2.5 rounded-full bg-clay px-7 py-3.5 text-[15px] font-bold text-white transition hover:-translate-y-0.5 hover:bg-clay-deep">
@@ -42,18 +41,18 @@ export default function SiteFooter() {
           <div className="flex items-center gap-3">
             <Image
               src="/images/kahawawest_logo.jpg"
-              alt="Kahawa West Family Medical Centre logo"
+              alt="Kahawa West Family Hospital logo"
               width={52}
               height={52}
               className="h-11 w-11 rounded-xl object-cover"
             />
             <div className="leading-tight">
               <p className="font-display text-[17px] font-semibold">Kahawa West</p>
-              <p className="text-[11px] font-medium uppercase tracking-[0.14em] text-cream/60">Family Medical Centre</p>
+              <p className="text-[11px] font-medium uppercase tracking-[0.14em] text-cream/60">Family Hospital</p>
             </div>
           </div>
           <p className="mt-5 max-w-xs text-[13.5px] leading-relaxed text-cream/65">
-            {site.tagline} A community-rooted Level 3 practice serving Kahawa West, Zimmerman and the greater Roysambu constituency.
+            {site.tagline} A community-rooted Level 3 facility serving Kahawa West, Zimmerman and the greater Roysambu constituency.
           </p>
           <p className="mt-4 inline-flex items-center gap-2 rounded-full bg-cream/10 px-3.5 py-1.5 text-[11.5px] font-semibold uppercase tracking-wider text-gold">
             {site.facility.accreditation}
