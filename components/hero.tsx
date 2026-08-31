@@ -26,7 +26,7 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="relative isolate min-h-[790px] overflow-hidden bg-[#eef3ef] lg:min-h-[calc(100svh-50px)]"
+      className="relative isolate min-h-[790px] overflow-hidden bg-[#eef3ef] lg:min-h-[max(820px,calc(100svh-50px))]"
     >
       {/* Supplied room/background artwork */}
       <picture className="absolute inset-0 -z-30 h-full w-full">
@@ -55,11 +55,11 @@ export default function Hero() {
         className="pointer-events-none absolute -z-10 hidden lg:block"
         style={{
           top: "7%",
-          right: "22%",
-          width: "31vw",
-          maxWidth: 515,
-          minWidth: 390,
-          height: "76%",
+          right: "12%",
+          width: "34vw",
+          maxWidth: 560,
+          minWidth: 430,
+          height: "84%",
         }}
         aria-hidden
       >
@@ -75,7 +75,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="mx-auto flex min-h-[790px] max-w-[1536px] items-center px-5 pb-9 pt-28 sm:px-8 lg:min-h-[calc(100svh-50px)] lg:px-20 lg:pb-12 lg:pt-20">
+      <div className="mx-auto flex min-h-[790px] max-w-[1536px] items-center px-5 pb-9 pt-28 sm:px-8 lg:min-h-[max(820px,calc(100svh-50px))] lg:px-20 lg:pb-12 lg:pt-20">
         <div className="relative w-full">
           <div className="max-w-[700px] lg:pt-3">
             <p className="inline-flex items-center gap-2 rounded-full border border-[#d4e1d9] bg-white/78 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.14em] text-pine shadow-[0_8px_22px_rgba(12,59,46,0.06)] backdrop-blur-md">
@@ -105,7 +105,7 @@ export default function Hero() {
               your name.
             </h1>
 
-            <p className="mt-7 max-w-[650px] text-[16px] leading-[1.75] text-[#53635c] sm:text-[17px]">
+            <p className="mt-7 max-w-[610px] text-[16px] leading-[1.75] text-[#53635c] sm:text-[17px]">
               We’re the neighbourhood medical centre behind Kahawa West Market —
               general outpatient care, mother-and-child health, an eye clinic, basic
               orthopaedics and a Class C laboratory. Walk in any day of the week,
