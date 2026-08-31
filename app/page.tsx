@@ -10,6 +10,7 @@ import Booking from "@/components/booking";
 import PatientInfo from "@/components/patient-info";
 import VisitUs from "@/components/visit-us";
 import SiteFooter from "@/components/site-footer";
+import Chatbot from "@/components/chatbot";
 import { site } from "@/lib/site";
 
 const jsonLd = {
@@ -53,6 +54,7 @@ export default function Page() {
       <footer className="mt-auto">
         <SiteFooter />
       </footer>
+      <Chatbot />
     </div>
   );
 }
