@@ -1,7 +1,8 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
-import { IconLogo, IconMenu, IconClose, IconCalendar } from "@/components/icons";
+import { IconMenu, IconClose, IconCalendar } from "@/components/icons";
 
 const links = [
   { href: "#services", label: "Services" },
@@ -30,7 +31,14 @@ export default function SiteHeader() {
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
         <a href="#top" className="flex items-center gap-3" aria-label="Kahawa West Family Medical Centre — home">
-          <IconLogo className="h-10 w-10 shrink-0 rounded-xl shadow-sm" />
+          <Image
+            src="/images/kahawawest_logo.jpg"
+            alt="Kahawa West Family Medical Centre logo"
+            width={48}
+            height={48}
+            priority
+            className="h-10 w-10 shrink-0 rounded-xl object-cover shadow-sm"
+          />
           <span className="leading-tight">
             <span className="block font-display text-[17px] font-semibold text-forest">
               Kahawa West
@@ -43,11 +51,7 @@ export default function SiteHeader() {
 
         <nav className="hidden items-center gap-7 lg:flex" aria-label="Primary">
           {links.map((l) => (
-            <a
-              key={l.href}
-              href={l.href}
-              className="text-[14.5px] font-medium text-ink/80 transition hover:text-forest"
-            >
+            <a key={l.href} href={l.href} className="text-[14.5px] font-medium text-ink/80 transition hover:text-forest">
               {l.label}
             </a>
           ))}
@@ -75,26 +79,13 @@ export default function SiteHeader() {
       </div>
 
       {open && (
-        <nav
-          id="mobile-nav"
-          aria-label="Mobile"
-          className="animate-pop glass border-t border-line px-4 pb-5 pt-2 lg:hidden"
-        >
+        <nav id="mobile-nav" aria-label="Mobile" className="animate-pop glass border-t border-line px-4 pb-5 pt-2 lg:hidden">
           {links.map((l) => (
-            <a
-              key={l.href}
-              href={l.href}
-              onClick={() => setOpen(false)}
-              className="block border-b border-line/60 py-3 text-[15px] font-medium text-ink"
-            >
+            <a key={l.href} href={l.href} onClick={() => setOpen(false)} className="block border-b border-line/60 py-3 text-[15px] font-medium text-ink">
               {l.label}
             </a>
           ))}
-          <a
-            href="#book"
-            onClick={() => setOpen(false)}
-            className="mt-4 flex items-center justify-center gap-2 rounded-full bg-clay px-5 py-3 text-sm font-semibold text-white"
-          >
+          <a href="#book" onClick={() => setOpen(false)} className="mt-4 flex items-center justify-center gap-2 rounded-full bg-clay px-5 py-3 text-sm font-semibold text-white">
             <IconCalendar className="h-4 w-4" />
             Book a visit
           </a>
