@@ -1,15 +1,15 @@
 /**
  * ─────────────────────────────────────────────────────────────────────────────
- *  KAHAWA WEST FAMILY MEDICAL CENTRE — SITE CONFIGURATION
+ *  KAHAWA WEST FAMILY HOSPITAL — SITE CONFIGURATION
  *  This is the single file the facility team needs to edit to update phone
  *  numbers, hours, services and patient-facing copy across the whole site.
  * ─────────────────────────────────────────────────────────────────────────────
  */
 
 export const site = {
-  name: "Kahawa West Family Medical Centre",
-  shortName: "KW Family Medical Centre",
-  tagline: "Family care, close to home.",
+  name: "Kahawa West Family Hospital",
+  shortName: "Kahawa West Family Hospital",
+  tagline: "Your Family's Health Partner.",
   area: "Zimmerman Ward · Roysambu Constituency · Nairobi",
 
   phone: {
@@ -33,7 +33,7 @@ export const site = {
     line1: "Kahawa West Market area, off the Northern Bypass feeder roads",
     line2: "Zimmerman Ward, Roysambu Constituency, Nairobi",
     mapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=Kahawa+West+Family+Medical+Centre+Nairobi",
+      "https://www.google.com/maps/search/?api=1&query=Kahawa+West+Family+Hospital+Nairobi",
     osmEmbed:
       "https://www.openstreetmap.org/export/embed.html?bbox=36.8790%2C-1.1780%2C36.9260%2C-1.1340&layer=mapnik&marker=-1.1560%2C36.9025",
   },
@@ -57,12 +57,12 @@ export const site = {
     {
       service: "Emergency & triage",
       time: "Bedside stabilisation during opening hours",
-      note: "After hours — call the clinic line first",
+      note: "After hours — call the hospital line first",
     },
   ],
 
   stats: [
-    { value: "6", label: "clinical departments" },
+    { value: "6", label: "core clinical departments" },
     { value: "2", label: "inpatient observation beds" },
     { value: "3", label: "languages spoken" },
     { value: "7", label: "days a week, late" },
@@ -85,7 +85,7 @@ export const departments: Department[] = [
     name: "General Outpatient & Chronic Care",
     short: "Everyday consultations",
     blurb:
-      "First-line treatment for the whole family — from fevers and chest infections to skin and tummy troubles — plus structured follow-up for hypertension and Type 2 diabetes so small problems never become big ones.",
+      "First-line treatment for the whole family — from fevers and chest infections to skin and tummy troubles — plus structured follow-up for hypertension and Type 2 diabetes.",
     tags: ["Family consultations", "Hypertension clinic", "Diabetes clinic", "Respiratory & skin"],
     image: "/images/chronic-care.jpg",
     alt: "Clinician listening to an elderly patient’s chest with a stethoscope",
@@ -95,8 +95,8 @@ export const departments: Department[] = [
     name: "Maternal & Child Health",
     short: "MCH & family planning",
     blurb:
-      "Focused antenatal care, postnatal reviews, KEPI childhood immunisations and honest family-planning counselling — short-term, long-acting (IUDs, implants) and permanent options, delivered with dignity.",
-    tags: ["Antenatal (FANC)", "KEPI immunisation", "Postnatal care", "Family planning"],
+      "Focused antenatal care, postnatal reviews, childhood immunisation and family-planning counselling — delivered with dignity.",
+    tags: ["Antenatal", "Child immunisation", "Postnatal care", "Family planning"],
     image: "/images/mch-newborn.jpg",
     alt: "A mother lying beside her newborn baby",
   },
@@ -105,7 +105,7 @@ export const departments: Department[] = [
     name: "Basic Orthopaedics",
     short: "Bones, joints & injuries",
     blurb:
-      "Evaluation and stabilisation of simple fractures, sprains and minor dislocations — plaster casts, synthetic splints and closed reduction. Complex surgical cases are stabilised here and referred onward seamlessly.",
+      "Evaluation and stabilisation of simple fractures, sprains and minor dislocations — with referral support for complex cases.",
     tags: ["Fracture care", "Plaster & splints", "Closed reduction", "Referral support"],
     image: "/images/ortho-cast.jpg",
     alt: "A clinician applying a plaster bandage to a patient’s arm",
@@ -125,7 +125,7 @@ export const departments: Department[] = [
     name: "Class C Diagnostic Laboratory",
     short: "Answers, same visit",
     blurb:
-      "A KMLTTB-credentialed team runs full haemograms, malaria microscopy, typhoid serology, urine & stool analysis, glucose and HbA1c, lipid, renal and liver panels, HIV rapid tests and STI screens.",
+      "A KMLTTB-credentialed team provides haemograms, malaria microscopy, typhoid serology, urine & stool analysis, glucose and HbA1c, lipid, renal and liver panels, HIV rapid tests and STI screens.",
     tags: ["Haemogram", "Malaria testing", "HbA1c & lipids", "HIV & STI panels"],
     image: "/images/lab-tech.jpg",
     alt: "A laboratory technologist pipetting blood samples",
@@ -135,9 +135,61 @@ export const departments: Department[] = [
     name: "Inpatient Observation & Emergency Stabilisation",
     short: "Short-stay beds",
     blurb:
-      "A quiet two-bed unit for IV rehydration, injectable medicines, nebulisation and oxygen, post-procedure recovery — and calm, capable stabilisation before transfer when a case needs a bigger hospital.",
+      "Short-stay support for IV rehydration, injectable medicines, nebulisation and oxygen, post-procedure recovery, and pre-referral stabilisation.",
     tags: ["IV therapy", "Nebulisation & oxygen", "Recovery monitoring", "Pre-referral care"],
   },
+];
+
+export type SpecialClinic = {
+  id: string;
+  name: string;
+  schedule?: string;
+  detail?: string;
+};
+
+export const specialClinics: SpecialClinic[] = [
+  { id: "consultant-ortho", name: "Consultant Orthopaedic Surgeon" },
+  { id: "consultant-psychiatrist", name: "Consultant Psychiatrist" },
+  { id: "consultant-obgyn", name: "Consultant Obstetrician / Gynaecologist" },
+  { id: "paediatric-well-baby", name: "Paediatric & Well Baby Clinic" },
+  {
+    id: "chronic-pain",
+    name: "Chronic Pain Clinic",
+    schedule: "Monday",
+    detail: "Osteoarthritis, rheumatoid arthritis and related chronic pain conditions",
+  },
+  { id: "surgery-clinic", name: "Surgery Clinic", schedule: "Monday" },
+  { id: "diabetes-clinic", name: "Diabetes Clinic", schedule: "Tuesday" },
+  { id: "antenatal-clinic", name: "Antenatal Clinic", schedule: "Wednesday & Saturday" },
+  { id: "fertility-clinic", name: "Fertility Clinic", schedule: "Wednesday & Saturday" },
+  { id: "hypertension-clinic", name: "Hypertension Clinic", schedule: "Thursday" },
+  { id: "urology-clinic", name: "Urology Clinic" },
+  {
+    id: "rehab-clinic",
+    name: "Outpatient Drug & Alcohol Rehabilitation Clinic",
+    schedule: "Friday",
+  },
+];
+
+export const otherServices = [
+  "Ultrasound Services",
+  "Pathology Biopsies (FNA and Core Biopsies)",
+  "Comprehensive Laboratory Services",
+  "Well-stocked Pharmacy & Prescriptions",
+  "Baby-friendly Vaccines & Travel Vaccinations",
+  "Physiotherapy & Occupational Therapy",
+  "Home Care Services",
+  "Nutritional Counseling",
+  "Cancer Screening & Wellness Checks",
+];
+
+export const bookableServices = [
+  ...departments.map(({ id, name }) => ({ id, name })),
+  ...specialClinics.map(({ id, name }) => ({ id, name })),
+  ...otherServices.map((name) => ({
+    id: name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, ""),
+    name,
+  })),
 ];
 
 export type SymptomTerm = {
@@ -184,16 +236,16 @@ export const symptomTerms: SymptomTerm[] = [
     deptId: "mch",
     deptLabel: "MCH Department",
     plain:
-      "A private consultation on safe contraceptive options — daily pills and injections, long-acting IUDs and implants, or permanent methods — so you can choose what fits your life.",
+      "A private consultation on contraceptive options so you can choose what fits your life.",
   },
   {
     lay: "Kupima shingo ya uzazi",
     alt: "“Cervical check”",
-    clinical: "Cervical cancer screening (Pap smear)",
+    clinical: "Cervical cancer screening",
     deptId: "mch",
     deptLabel: "Preventive Care",
     plain:
-      "A quick, simple swab test that checks for early abnormal cell changes on the cervix — catching trouble many years before it becomes cancer.",
+      "A quick screening test that checks for early abnormal cell changes on the cervix.",
   },
   {
     lay: "Kupumua kwa shida",
@@ -202,7 +254,7 @@ export const symptomTerms: SymptomTerm[] = [
     deptId: "inpatient",
     deptLabel: "Emergency / Outpatient Nursing",
     plain:
-      "Breathing support — oxygen, or fast-acting medication misted through a nebuliser — while the team finds and treats the cause. Severe cases are seen immediately.",
+      "Breathing support with oxygen or nebulisation while the team finds and treats the cause. Severe cases are seen immediately.",
   },
 ];
 
@@ -219,15 +271,15 @@ export const faqs = [
   {
     q: "What should I bring on my first visit?",
     body: [
-      "A valid national ID, passport — or a birth certificate for children — plus your active SHA (Social Health Authority) registration number. If you were referred from another facility, carry the referral letter and any previous results or scans.",
-      "For children, bring the KEPI immunisation booklet so growth and vaccine records stay up to date. And keep a list of any medicines you currently take.",
+      "A valid national ID, passport — or a birth certificate for children — plus your active SHA registration number. If you were referred from another facility, carry the referral letter and any previous results or scans.",
+      "For children, bring the immunisation booklet so growth and vaccine records stay up to date. Keep a list of any medicines you currently take.",
     ],
   },
   {
     q: "How do I prepare for laboratory tests?",
     body: [
       "For fasting blood sugar or a lipid panel, take nothing but water for 8–12 hours before your blood is drawn — morning slots are easiest.",
-      "For a urine test, collect a clean-catch midstream sample. Before pelvic exams or a Pap smear, avoid intra-vaginal treatments for 48 hours. For pelvic or obstetric ultrasound, drink 1–1.5 litres of water about an hour before and keep a full bladder — it gives the scanner a clear window.",
+      "For a urine test, collect a clean-catch midstream sample. Before pelvic exams or a Pap smear, avoid intra-vaginal treatments for 48 hours. For pelvic or obstetric ultrasound, drink 1–1.5 litres of water about an hour before and keep a full bladder.",
     ],
   },
   {
@@ -266,12 +318,13 @@ export const transit = [
     title: "Landmarks",
     lines: [
       "Look for the Kahawa West Market area behind Farmers Choice, near the Northern Bypass feeder roads.",
-      "Locals also know the area by Karura Stage and Mahiga Primary School — ask any boda rider for the Family Medical Centre.",
+      "Locals also know the area by Karura Stage and Mahiga Primary School — ask any boda rider for the Family Hospital.",
     ],
   },
 ];
 
 export const marqueeItems = [
+  "Kahawa West Family Hospital",
   "Level 3 registered nursing home",
   "SHA / SHIF accredited",
   "Class C laboratory",
