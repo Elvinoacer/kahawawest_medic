@@ -3,9 +3,6 @@
  *  KAHAWA WEST FAMILY MEDICAL CENTRE — SITE CONFIGURATION
  *  This is the single file the facility team needs to edit to update phone
  *  numbers, hours, services and patient-facing copy across the whole site.
- *
- *  ⚠️  ACTION FOR THE OWNER: replace the placeholder phone numbers below with
- *      the facility's live lines before going to production.
  * ─────────────────────────────────────────────────────────────────────────────
  */
 
@@ -15,14 +12,13 @@ export const site = {
   tagline: "Family care, close to home.",
   area: "Zimmerman Ward · Roysambu Constituency · Nairobi",
 
-  /* ⚠️ PLACEHOLDER — replace with the facility's live phone/WhatsApp lines */
   phone: {
-    display: "0700 000 000",
-    href: "tel:+254700000000",
+    display: "0798 319936",
+    href: "tel:+254798319936",
   },
   whatsapp: {
-    display: "0700 000 000",
-    href: "https://wa.me/254700000000",
+    display: "0798 319936",
+    href: "https://wa.me/254798319936",
   },
   nationalEmergency: ["999", "112"],
 
