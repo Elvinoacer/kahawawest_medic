@@ -14,7 +14,7 @@ const outfit = Outfit({
 });
 
 const siteUrl = "https://kahawawest-medic.vercel.app";
-const previewImage = `${siteUrl}/images/preview_image_url.png`;
+const previewImage = `${siteUrl}/opengraph-image`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
         url: previewImage,
         width: 1200,
         height: 630,
-        alt: "Kahawa West Family Hospital — Special clinics and services",
+        alt: "Kahawa West Family Hospital — Family healthcare in Kahawa West, Nairobi",
       },
     ],
   },
