@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { CHAT_QUICK_REPLIES, CHAT_WELCOME } from "@/lib/chat-knowledge";
 import { site } from "@/lib/site";
+import ChatMarkdown from "@/components/chat-markdown";
 
 type Role = "user" | "assistant";
 
@@ -276,7 +277,10 @@ export default function Chatbot() {
                 }`}
               >
                 {m.content ? (
-                  <div className="whitespace-pre-wrap">{m.content}</div>
+                  <ChatMarkdown
+                    content={m.content}
+                    variant={m.role === "user" ? "user" : "assistant"}
+                  />
                 ) : (
                   <span className="inline-flex items-center gap-1.5 py-1">
                     <span className="chat-dot h-1.5 w-1.5 rounded-full bg-[#2b916f]" />
