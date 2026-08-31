@@ -7,7 +7,6 @@ import {
   emergencySigns,
   faqs,
   transit,
-  hours,
 } from "@/lib/site";
 
 /**
