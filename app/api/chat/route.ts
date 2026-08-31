@@ -19,6 +19,9 @@ export async function POST(req: Request) {
       );
     }
 
+    const model =
+      process.env.GROQ_MODEL?.trim() || "openai/gpt-oss-20b";
+
     const body = await req.json();
     const messages = (body?.messages ?? []) as ChatMessage[];
 
@@ -52,7 +55,7 @@ export async function POST(req: Request) {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          model: "llama-3.3-70b-versatile",
+          model,
           messages: groqMessages,
           temperature: 0.45,
           max_tokens: 900,
