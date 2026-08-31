@@ -1,5 +1,3 @@
-import { site } from "@/lib/site";
-
 export default function EmergencyBar() {
   return (
     <div className="min-h-[50px] bg-forest-deep text-cream">
