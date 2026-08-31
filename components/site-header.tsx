@@ -30,10 +30,10 @@ export default function SiteHeader() {
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
-        <a href="#top" className="flex items-center gap-3" aria-label="Kahawa West Family Medical Centre — home">
+        <a href="#top" className="flex items-center gap-3" aria-label="Kahawa West Family Hospital — home">
           <Image
             src="/images/kahawawest_logo.jpg"
-            alt="Kahawa West Family Medical Centre logo"
+            alt="Kahawa West Family Hospital logo"
             width={48}
             height={48}
             priority
@@ -44,7 +44,7 @@ export default function SiteHeader() {
               Kahawa West
             </span>
             <span className="block text-[11px] font-medium uppercase tracking-[0.14em] text-mute">
-              Family Medical Centre
+              Family Hospital
             </span>
           </span>
         </a>
