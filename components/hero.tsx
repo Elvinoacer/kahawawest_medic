@@ -75,22 +75,6 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Newborn care sits quietly in the background, reduced so the copy stays dominant. */}
-      <div
-        className="pointer-events-none absolute bottom-[2%] right-[2%] -z-15 hidden h-[58%] w-[42%] opacity-[0.24] xl:block"
-        aria-hidden
-      >
-        <img
-          src="/images/mch-newborn.jpg"
-          alt=""
-          className="h-full w-full object-contain object-right-bottom
-            [mask-image:radial-gradient(ellipse_at_70%_70%,black_16%,rgba(0,0,0,0.78)_38%,rgba(0,0,0,0.30)_62%,transparent_84%)]
-            [filter:saturate(0.86)]"
-          width={1200}
-          height={1000}
-        />
-      </div>
-
       <div className="mx-auto flex min-h-[790px] max-w-[1536px] items-center px-5 pb-9 pt-28 sm:px-8 lg:min-h-[max(820px,calc(100svh-50px))] lg:px-20 lg:pb-12 lg:pt-20">
         <div className="relative w-full">
           <div className="relative z-20 max-w-[700px] lg:pt-3">
@@ -200,7 +184,7 @@ export default function Hero() {
 
           {/* Bottom-center baby card */}
           <div className="absolute bottom-[-18px] left-[51%] hidden w-[450px] -translate-x-1/2 overflow-hidden rounded-[27px] border border-white/80 bg-white/76 shadow-[0_22px_55px_rgba(12,59,46,0.18)] backdrop-blur-xl xl:block">
-            <div className="grid grid-cols-[46%,54%] items-stretch">
+            <div className="grid grid-cols-[23%,77%] items-stretch">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/images/mch-newborn.jpg"
