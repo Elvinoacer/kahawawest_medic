@@ -182,27 +182,27 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Bottom-center baby card */}
-          <div className="absolute bottom-[-18px] left-[51%] hidden w-[450px] -translate-x-1/2 overflow-hidden rounded-[27px] border border-white/80 bg-white/76 shadow-[0_22px_55px_rgba(12,59,46,0.18)] backdrop-blur-xl xl:block">
-            <div className="grid grid-cols-[23%,77%] items-stretch">
+          {/* Bottom-right baby card — shrunk 50% and pushed right to avoid text contrast/overlap */}
+          <div className="absolute bottom-[-10px] right-[330px] hidden w-[225px] overflow-hidden rounded-[18px] border border-white/80 bg-white/76 shadow-[0_16px_40px_rgba(12,59,46,0.16)] backdrop-blur-xl xl:block">
+            <div className="grid grid-cols-[30%,70%] items-stretch">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/images/mch-newborn.jpg"
                 alt="Newborn baby receiving care"
-                className="h-[164px] w-full object-cover"
-                width={480}
-                height={384}
+                className="h-[82px] w-full object-cover"
+                width={240}
+                height={192}
               />
-              <div className="flex flex-col justify-center px-5 py-4">
-                <p className="flex items-start gap-2 text-[14px] font-semibold leading-snug text-[#18372e]">
-                  <IconHeart className="mt-0.5 h-[19px] w-[19px] shrink-0 text-[#2d9771]" />
+              <div className="flex flex-col justify-center px-3 py-2">
+                <p className="flex items-start gap-1.5 text-[11px] font-semibold leading-snug text-[#18372e]">
+                  <IconHeart className="mt-0.5 h-[14px] w-[14px] shrink-0 text-[#2d9771]" />
                   <span>Caring for every stage of life.</span>
                 </p>
-                <p className="ml-[27px] mt-2 text-[12px] text-[#68756f]">You&apos;re in good hands.</p>
-                <div className="ml-[27px] mt-4 flex items-center gap-1.5" aria-hidden>
-                  <span className="h-1.5 w-6 rounded-full bg-[#62a98d]" />
-                  <span className="h-1.5 w-1.5 rounded-full bg-[#d8dedb]" />
-                  <span className="h-1.5 w-1.5 rounded-full bg-[#d8dedb]" />
+                <p className="ml-[20px] mt-1 text-[10px] text-[#68756f]">You&apos;re in good hands.</p>
+                <div className="ml-[20px] mt-2 flex items-center gap-1" aria-hidden>
+                  <span className="h-1 w-4 rounded-full bg-[#62a98d]" />
+                  <span className="h-1 w-1 rounded-full bg-[#d8dedb]" />
+                  <span className="h-1 w-1 rounded-full bg-[#d8dedb]" />
                 </div>
               </div>
             </div>
