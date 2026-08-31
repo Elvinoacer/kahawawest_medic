@@ -10,7 +10,6 @@ import {
 export default function Hero() {
   return (
     <section id="top" className="relative overflow-hidden">
-      {/* backdrop decoration */}
       <div className="pattern-dots absolute inset-x-0 top-0 h-72 opacity-40" aria-hidden />
       <div
         className="absolute -right-40 -top-24 h-[480px] w-[480px] rounded-full bg-mint/70 blur-3xl"
@@ -22,7 +21,6 @@ export default function Hero() {
       />
 
       <div className="relative mx-auto grid max-w-7xl items-center gap-14 px-4 pb-20 pt-12 sm:px-6 lg:grid-cols-12 lg:gap-8 lg:pb-28 lg:pt-16">
-        {/* Copy */}
         <div className="lg:col-span-6">
           <p className="inline-flex items-center gap-2 rounded-full border border-line bg-paper px-4 py-1.5 text-[12.5px] font-semibold uppercase tracking-[0.13em] text-pine">
             <span className="h-1.5 w-1.5 rounded-full bg-leaf" aria-hidden />
@@ -52,10 +50,11 @@ export default function Hero() {
           </h1>
 
           <p className="mt-6 max-w-xl text-[17px] leading-relaxed text-mute">
-            We’re the neighbourhood medical centre behind Kahawa West Market —
-            general outpatient care, mother-and-child health, an eye clinic,
-            basic orthopaedics and a Class C laboratory. Walk in any day of the
-            week, book online, or call us. Whatever works for you.
+            Kahawa West Family Hospital brings family healthcare, specialist
+            clinics and diagnostics closer to home — from outpatient and
+            maternal & child care to consultant orthopaedics, psychiatry,
+            obstetrics & gynaecology, paediatrics, ultrasound, pharmacy,
+            rehabilitation, physiotherapy, home care and wellness screening.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-3">
@@ -87,19 +86,18 @@ export default function Hero() {
             </li>
             <li className="flex items-center gap-2">
               <IconPhone className="h-4.5 w-4.5 text-leaf" />
-              Walk-ins always welcome
+              Walk-ins welcome
             </li>
           </ul>
         </div>
 
-        {/* Imagery */}
         <div className="relative lg:col-span-6">
           <div className="relative mx-auto max-w-[560px]">
             <div className="arch overflow-hidden border-[6px] border-paper shadow-[0_30px_70px_rgba(12,59,46,0.22)]">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/images/hero-consult.jpg"
-                alt="A smiling doctor consulting a patient at the clinic desk"
+                alt="A smiling doctor consulting a patient at the hospital"
                 className="aspect-[4/5] w-full object-cover"
                 width={800}
                 height={1000}
