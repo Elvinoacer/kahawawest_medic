@@ -14,7 +14,7 @@ const outfit = Outfit({
 });
 
 const siteUrl = "https://kahawawest-medic.vercel.app";
-const previewImage = `${siteUrl}/opengraph-image`;
+const previewImage = `${siteUrl}/images/preview_image_url.webp`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
