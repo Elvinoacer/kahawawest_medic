@@ -13,7 +13,11 @@ const outfit = Outfit({
   subsets: ["latin"],
 });
 
+const siteUrl = "https://kahawawest-medic.vercel.app";
+const previewImage = `${siteUrl}/images/preview_image_url.png`;
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: "Kahawa West Family Hospital — Family healthcare in Kahawa West, Nairobi",
   description:
     "Kahawa West Family Hospital provides general outpatient care, maternal and child health, specialist clinics, diagnostics, pharmacy, rehabilitation, physiotherapy, home care, cancer screening and wellness services in Nairobi.",
@@ -45,6 +49,23 @@ export const metadata: Metadata = {
       "Family healthcare, specialist clinics, diagnostics and supportive services in Kahawa West, Nairobi.",
     type: "website",
     locale: "en_KE",
+    url: siteUrl,
+    siteName: "Kahawa West Family Hospital",
+    images: [
+      {
+        url: previewImage,
+        width: 1200,
+        height: 630,
+        alt: "Kahawa West Family Hospital — Special clinics and services",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Kahawa West Family Hospital",
+    description:
+      "Family healthcare, specialist clinics, diagnostics and supportive services in Kahawa West, Nairobi.",
+    images: [previewImage],
   },
 };
 
